@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+}
+
+h1, h2{
+  color: grey;
+}
+
+body{
+  padding: 20px 40px;
+}
+
+article{
+  width: 960px;
+}
+
+article h2{
+  color: grey;
+}
+
+ a{
+  text-decoration: none;
+  color: blue;
+  font-size: 14px;
+}
+
+article p{
+  color: grey;
+  font-size: 14px;
+}
+
+.press{
+  width: 960px;
+}
+.press img{
+  display: inline-block;
+  border: 4px solid lightgrey;
+  margin: 1px;
+   
+}
+
+footer p{
+  color: grey;
+  font-size: 14px;
+}
