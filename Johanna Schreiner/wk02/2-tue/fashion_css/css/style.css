@@ -1,15 +1,17 @@
 *{
   box-sizing: border-box;
+  font-family: Helvetica;
 }
 
 a{
   text-decoration: none;
+  color: red;
 }
 
 header h1, h2{
   display: inline-block;
   vertical-align: bottom;
-  font-family: Helvetica;
+ /* font-family: Helvetica;*/
   font-weight: 200;
   
 }
@@ -29,7 +31,7 @@ header h2{
 
 main h1{
   color: lightgrey;
-  font-family: Helvetica;
+  /*font-family: Helvetica;*/
   font-weight: 200;
   margin: 0 0 5px 0;
 }
@@ -42,7 +44,7 @@ main h2{
 
 main p{
   color: grey;
-  font-family: Helvetica;
+ /* font-family: Helvetica;*/
 }
 
 nav{
@@ -60,8 +62,12 @@ header nav a{
   color: white;
   background-color: black;
   min-width: calc(16.666% - 2px);
-  font-family: Helvetica;
+  /*font-family: Helvetica;*/
   font-weight: 200;
+}
+
+header nav ul{
+  padding: 0;
 }
 
 .container{
@@ -112,6 +118,7 @@ footer nav{
 footer nav a{
   color: red;
   text-decoration: none;
+ /* font-family: Helvetica;*/
   margin-top: 20px;
   margin-right: 10px;
 }
