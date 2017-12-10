@@ -1,0 +1,102 @@
+*{
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background-color: lightgrey;
+}
+
+header{
+  /* have cheated and placed 4 images into the header as the background, I can't make the image repeat itself... */
+}
+
+header img{
+  width: 25%;
+  padding-bottom: 80px;
+}
+
+.logo{
+  /* cannot get image to sit on top of the other background images */
+  width: 15%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+main, aside{
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+}
+
+main{
+  width: 70%;
+}
+
+main a{
+  text-decoration: none;
+  color: red;
+  font-weight: 600;
+}
+
+.download{
+  margin: 0 5px;
+  text-transform: uppercase;
+}
+
+main img{
+  width: 100%;
+}
+
+main footer{
+  border-top: 0.5px dotted black;
+  border-bottom: 0.5px solid black;
+}
+
+aside{
+  width: 30%;
+  height: 80%;
+}
+
+aside ul{
+  list-style-type: none;
+  padding: 0;
+  font-weight: 600;
+}
+
+aside li{
+  padding: 5px 0;
+}
+
+aside a{
+  text-decoration: none;
+  color: black;
+}
+
+aside img{
+  width: 100%;
+  margin: 10px 0;
+}
+
+.blogroll h2, .archive h2{
+  padding: 0;
+  margin: 0;
+}
+
+.social{
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.social img{
+  margin: 0 5px;
+}
