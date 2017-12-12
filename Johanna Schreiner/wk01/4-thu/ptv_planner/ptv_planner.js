@@ -1,10 +1,18 @@
 console.log("PTV PLANNER")
 
-var alamein = ["Flinders St","Richmond","East Richmond","Burnley","Hawthorn","Glenferrie"]
-var glenWaverley = ["Flagstaff","Melbourne Central","Parliament","Richmond","Kooyong","Tooronga"]
-var sandringham = ["Southern Cross","Richmond","South Yarra","Prahran","Windsor"]
+// var alamein = ["Flinders St","Richmond","East Richmond","Burnley","Hawthorn","Glenferrie"]
+// var glenWaverley = ["Flagstaff","Melbourne Central","Parliament","Richmond","Kooyong","Tooronga"]
+// var sandringham = ["Southern Cross","Richmond","South Yarra","Prahran","Windsor"]
 
-var trainLineList = [alamein, glenWaverley, sandringham]
+var trainLineList = {
+  alamein: ["Flinders St","Richmond","East Richmond","Burnley","Hawthorn","Glenferrie"],
+  glenWaverley: ["Flagstaff","Melbourne Central","Parliament","Richmond","Kooyong","Tooronga"],
+  sandringham: ["Southern Cross","Richmond","South Yarra","Prahran","Windsor"]
+}
+
+for( line in trainLineList){
+  console.log(line)
+}
 
 // DEPARTURE //
 
@@ -17,7 +25,7 @@ var departStation = "Southern Cross"
 
 var findDepartTrainLine = function(trainLineList, departStation){
   var departTrainLine = "sandringham" // find array within trainLineList array....searching by inner array contents....
-  console.log(departTrainLine)
+  // console.log(departTrainLine)
   return departTrainLine
 }
 
@@ -57,7 +65,9 @@ findArriveStationIndex(glenWaverley, arriveStation)
 
 // JOURNEY PATH //
 
-console.log("Depart from " + departStation + " on the " + departTrainLine + " line. Change at Richmond to the " + arriveTrainLine + " line. Arrive at " + arriveStation + ".")
+var firstHalf
+
+// console.log("Depart from " + departStation + " on the " + departTrainLine + " line. Change at Richmond to the " + arriveTrainLine + " line. Arrive at " + arriveStation + ".")
 
 
 
