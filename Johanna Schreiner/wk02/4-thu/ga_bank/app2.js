@@ -15,24 +15,34 @@ var withdrawSavings = function(){
   savingsAccount = savingsAccount - Number(savingsInput.value)
   if(savingsAccount > 0){
     savingsSpan.textContent = savingsAccount
-  } else{
-    savingsAccount = 0
-    savingsSpan.textContent = 0
-    // make background color red
-  }
+    savingsInput.style.backgroundColor = 'gray'
+  } else if(isNaN(savingsAccount)){
+      savingsAccount = 0
+      savingsSpan.textContent = 0
+      savingsInput.style.backgroundColor = 'red'
+      alert("please enter a valid amount")
+    } else{
+        savingsAccount = 0
+        savingsSpan.textContent = 0
+        savingsInput.style.backgroundColor = 'red'
+      }
 }
 
 var depositSavings = function(){
   savingsAccount = savingsAccount + Number(savingsInput.value)
   if(savingsAccount > 0){
     savingsSpan.textContent = savingsAccount
-  } 
-
-  else{
+    savingsInput.style.backgroundColor = 'gray'
+  } else if(isNaN(savingsAccount)){
       savingsAccount = 0
       savingsSpan.textContent = 0
-      // make background color red
-  }
+      savingsInput.style.backgroundColor = 'red'
+      alert("please enter a valid amount")
+    } else{
+        savingsAccount = 0
+        savingsSpan.textContent = 0
+        savingsInput.style.backgroundColor = 'red'
+      }
 }
 
 withdrawSavingsBtn.addEventListener('click', withdrawSavings)
@@ -55,11 +65,12 @@ var withdrawChecking = function(){
   } else if(isNaN(checkingAccount)){
       checkingAccount = 0
       checkingSpan.textContent = 0
+      checkingInput.style.backgroundColor = 'gray'
       alert("please enter a valid amount")
     } else{
       checkingAccount = 0
       checkingSpan.textContent = 0
-      // make background color red
+      checkingInput.style.backgroundColor = 'red'
       }
 }
 
@@ -67,14 +78,16 @@ var depositChecking = function(){
   checkingAccount = checkingAccount + Number(checkingInput.value)
   if(checkingAccount > 0){
     checkingSpan.textContent = checkingAccount
+    checkingInput.style.backgroundColor = 'gray'
   } else if(isNaN(checkingAccount)){
       checkingAccount = 0
       checkingSpan.textContent = 0
+      checkingInput.style.backgroundColor = 'red'
       alert("please enter a valid amount")
     } else{
       checkingAccount = 0
       checkingSpan.textContent = 0
-      // make background color red
+      checkingInput.style.backgroundColor = 'red'
       }  
 }
 
