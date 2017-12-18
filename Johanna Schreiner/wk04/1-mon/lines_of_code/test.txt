@@ -1,0 +1,7 @@
+cat
+dog
+rabbit
+horse
+cow
+fish
+mouse
