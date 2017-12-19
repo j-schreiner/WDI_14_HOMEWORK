@@ -1,5 +1,6 @@
 require 'pry'
 
+### ARRAYS
 
 planeteers = ["Earth", "Wind", "Captain Planet", "Fire", "Water"]
 
@@ -15,7 +16,7 @@ puts planeteers
 
 ## deleting "Captain Planet" without using a method
 
-
+# need help with this, couldnt find the 'non-method method'...
 
 ## combining planeteers with rangers to make 'heroes'
 
@@ -26,19 +27,33 @@ puts heroes
 
 ## alphabetizing the values in  heroes
 
-heroes = heroes.sort!
-puts heroes
+alpha = heroes.sort!
+puts alpha
 
 ## randomise the order of content in heroes array
 
-heroes = heroes.shuffle
-puts heroes
+shuffled = heroes.shuffle
+puts shuffled
 
+## BONUS
 ## select a random element from heroes
 
-heroes.sample(heroes.length)
+random = heroes.sample(heroes.length)
+puts random
+
+# select elements in heroes that begin with 'B', using a method.
+
+b_heroes = heroes.select(start_with('B'))
+
 
 
 binding.pry
 
 puts 'end program'
+
+
+
+
+
+
+
