@@ -1,0 +1,13 @@
+<div class="main_container">
+
+  <div class="display_results">
+
+    <% @result_list.each do |movie| %>
+
+    <a href="/movie?title=<%=movie["Title"]%>"><img src="<%=movie["Poster"]%>">
+    </a>
+
+    <% end %>
+
+   </div> 
+</div>
