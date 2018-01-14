@@ -24,5 +24,13 @@ get '/movie' do
   @poster = result.parsed_response["Poster"]
   @plot = result.parsed_response["Plot"]
   @actors = result.parsed_response["Actors"]
+
+  conn = PG.connect(dbname: 'movies_db');
+
+  sql = "insert into movies (title, year, genre, plot, actors, poster_url) values ('#{@title}', '#{@year}', '#{@genre}', '#{@plot}', '#{@actors}', '#{@poster}');"
+
+  conn.exec(sql)
+  conn.close
+
   erb :movie
 end
