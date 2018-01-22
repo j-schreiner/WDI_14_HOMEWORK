@@ -1,10 +1,27 @@
-<h1>STOCK DATABASE</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>stocks</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
 
-<form action="/data">
-  <input type="text" name="stock_symbol" placeholder="stock symbol">
-  <button>enter</button>
-</form>
+<h1><%=@name%></h1>
+
+<h2>
+<%=@symbol%>: <%=@exchange%></h2>
 
 <div>
-<%= @stock %> 
+
+  <p>price: <%=@l%></p>
+  <p>high: <%=@hi%></p>
+  <p>low: <%=@lo%></p>
+  <p>volume: <%=@vo%></p>
+  <p>change: <%=@c%></p>
+  <p>change_ercentage:<%=@cp%></p>
+
 </div>
+
+</body>
+</html>

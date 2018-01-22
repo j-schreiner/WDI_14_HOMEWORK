@@ -1,0 +1,20 @@
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  background-color: mistyrose;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: arial;
+  font-size: 60px;
+}
