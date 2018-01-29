@@ -30,24 +30,52 @@ cityType.add(LA, null);
 cityType.add(SYD, null);
 cityType.add(ATX, null);
 
+function changeImage(){
+
+  // if(backgroundImage.classList.length >= 1){
+  //   backgroundImage.classname = ""
+  // }
+
+  switch(cityType.value){
+    case "NYC":
+      backgroundImage.classList.add('nyc')
+    break
+
+    case "SF":
+      backgroundImage.classList.add('sf')
+    break
+
+    case "LA":
+      backgroundImage.classList.add('la')
+    break
+    
+    case "SYD":
+      backgroundImage.classList.add('sydney')
+    break 
+
+    case "ATX":
+      backgroundImage.classList.add('austin')
+    break
+  }
+}
 
 
 var backgroundImage = document.querySelector("body")
 
-function changeImage(){
+// function changeImage(){
 
-  if (cityType.value == "NYC"){
-    backgroundImage.classList.add('nyc')
-  } else if(cityType.value == "SF"){
-    backgroundImage.classList.add('sf')
-  } else if (cityType.value == "LA"){
-    backgroundImage.classList.add('la')
-  } else if (cityType.value == "SYD"){
-    backgroundImage.classList.add('sydney')
-  } else if (cityType.value == "ATX"){
-    backgroundImage.classList.add('austin')
-  } 
+//   if (cityType.value == "NYC"){
+//     backgroundImage.classList.add('nyc')
+//   } else if(cityType.value == "SF"){
+//     backgroundImage.classList.add('sf')
+//   } else if (cityType.value == "LA"){
+//     backgroundImage.classList.add('la')
+//   } else if (cityType.value == "SYD"){
+//     backgroundImage.classList.add('sydney')
+//   } else if (cityType.value == "ATX"){
+//     backgroundImage.classList.add('austin')
+//   } 
  
-}
+// }
 
 cityType.addEventListener("change", changeImage)

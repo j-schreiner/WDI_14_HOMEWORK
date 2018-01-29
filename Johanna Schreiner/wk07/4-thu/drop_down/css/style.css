@@ -132,12 +132,13 @@ header {
 .la {
   background-image: url(../images/la.jpg)
 }
-.austin {
-  background-image: url(../images/austin.jpg)
-}
 .sydney {
   background-image: url(../images/sydney.jpg)
 }
+.austin {
+  background-image: url(../images/austin.jpg)
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES
