@@ -1,0 +1,55 @@
+<h2><%= @project_title %></h2>
+
+<div class="parent-wrapper">
+
+  <div class="wrapper">
+  <img src="<%=@project_preview%>">
+  <span class="heart" style="color: white;">&#10084;</span>
+  </div>
+
+  <form action="/likes" method="post">
+    <span class="like-count"><%=@project.likes.count%></span>
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+    <input type="hidden" name="project_id" value="<%=@project.id%>">
+    <button>like</button>
+  </form>
+
+
+  <form action="/comments" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+    <input type="hidden" name="project_id" value="<%=@project.id%>">
+    <textarea name="body"></textarea> 
+    <button>post comment</button>
+  </form>
+
+</div>
+
+<% @comments.each do |comment| %>
+  <p><%= comment.body%></p>
+<% end %>
+
+<script>
+
+  var likeButton = document.querySelector(".heart")
+
+  function clickLike(){
+
+    if (event.target.style.color == "white"){
+      event.target.style.color = "red"
+    } else {
+      event.target.style.color = "white"
+    }
+
+    var heart = document.querySelector('.heart')
+  
+    var card = event.target.closest('.parent-wrapper')
+    var likeCount = card.querySelector('.like-count')
+
+    likeCount.textContent = Number(likeCount.textContent) + 1
+
+  }
+
+  likeButton.addEventListener('click', clickLike)
+
+</script>
+
