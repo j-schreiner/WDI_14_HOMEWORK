@@ -1,40 +1,24 @@
 console.log("test")
 
+var cityType = document.querySelector("#city-type")
 
-var cityType = document.querySelector("#city-type");
+var cityAbbrev = ["NYC", "SF", "LA","SYD", "ATX"]
 
-var NYC = document.createElement("option");
-var SF = document.createElement("option");
-var LA = document.createElement("option");
-var SYD = document.createElement("option");
-var ATX = document.createElement("option");
+cityAbbrev.forEach(function(city) {
 
-NYC.value = "NYC";
-NYC.text = "NYC";
+  var newOption = document.createElement('option')
+  newOption.textContent = city
+  newOption.value = city
 
-SF.value = "SF";
-SF.text = "SF";
-
-LA.value = "LA";
-LA.text = "LA";
-
-SYD.value = "SYD";
-SYD.text = "SYD";
-
-ATX.value = "ATX";
-ATX.text = "ATX";
-
-cityType.add(NYC, null);
-cityType.add(SF, null);
-cityType.add(LA, null);
-cityType.add(SYD, null);
-cityType.add(ATX, null);
+  cityType.appendChild( newOption )
+  
+})
 
 function changeImage(){
 
-  // if(backgroundImage.classList.length >= 1){
-  //   backgroundImage.classname = ""
-  // }
+  if(backgroundImage.classList.length >= 1){
+    backgroundImage.classList = []
+  }
 
   switch(cityType.value){
     case "NYC":
@@ -61,21 +45,5 @@ function changeImage(){
 
 
 var backgroundImage = document.querySelector("body")
-
-// function changeImage(){
-
-//   if (cityType.value == "NYC"){
-//     backgroundImage.classList.add('nyc')
-//   } else if(cityType.value == "SF"){
-//     backgroundImage.classList.add('sf')
-//   } else if (cityType.value == "LA"){
-//     backgroundImage.classList.add('la')
-//   } else if (cityType.value == "SYD"){
-//     backgroundImage.classList.add('sydney')
-//   } else if (cityType.value == "ATX"){
-//     backgroundImage.classList.add('austin')
-//   } 
- 
-// }
 
 cityType.addEventListener("change", changeImage)
