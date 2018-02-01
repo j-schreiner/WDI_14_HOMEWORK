@@ -1,0 +1,14 @@
+
+<section class="add">
+
+<h2>Pokedex:</h2>
+
+<a class="add" href="/pokemons/new"><p>Add Pokemon</p></a>
+
+</section>
+
+<%@pokemons.each do |pokemon|%>
+
+  <a href="/pokemons/<%=pokemon.id%>"><p><%= pokemon.id%>. <%= pokemon.nickname%>, <%= pokemon.species%>, <%= pokemon.level%></p></a>
+
+<%end%>

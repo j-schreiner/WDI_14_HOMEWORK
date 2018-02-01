@@ -1,0 +1,45 @@
+body {
+  background-color: #7a1e35;
+  margin: 100px;
+}
+
+h2, a, p {
+  color: white;
+  font-family: Helvetica, sans-serif;
+}
+
+h2 {
+  font-family: 'Slabo 27px', serif;
+  font-size: 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+/*  margin-bottom: 50px;*/
+}
+
+.add {
+/*  margin-bottom: 100px;
+*/}
+
+a {
+  text-decoration: none;
+}
+
+a :hover {
+  opacity: .5;
+}
+
+input, button {
+  border: 1px solid white;
+  background: none;
+  color: white;
+  padding: 5px 10px;
+  font-family: Helvetica, sans-serif;
+}
+
+button {
+  text-transform: uppercase;
+}
+
+.add {
+  margin-bottom: 100px;
+}
