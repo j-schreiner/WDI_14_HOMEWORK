@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Infinite Giphy</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Hairline" rel="stylesheet">
+</head>
+<body>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous">
+  </script>
+
+  <div class="menu-container">
+  <h1>Infinite Giphy</h1>
+  <p>gifs, gifs, gifs, and more gifs.</p>
+
+  <input class="searched" type="text" placeholder="search gifs">
+  <button>search</button>
+  </div>
+
+  <div class="gif-container"> 
+  </div>
+
+  <script type="text/javascript">
+
+    var $srchBtn = $('button').on('click', function(){
+
+      var $searched = $('.searched').val().replace(' ', '+') 
+      // if two words, $searched has to swap spaces for a + .... split(' ', '+')
+
+      var $container = $('.gif-container')
+
+
+      var request = {
+      url: "http://api.giphy.com/v1/gifs/search?q=" + $searched + "&api_key=xCdcHMVTITVnSf9j6hTC8vOdAyMwGLrK&limit=10",
+      method: 'get'
+      }
+
+
+      $.ajax(request).done(function(res){
+
+        var response = res.data
+
+        response.forEach(function(gif){
+          var newDivElem = $('<div>')
+          var newGif = $('<img>')
+          newGif.attr('src', gif.images.original.url)
+          newDivElem.append(newGif)
+          $container.append(newDivElem)
+        })
+
+      })
+
+})
+
+
+  </script>
+
+</body>
+</html>
+

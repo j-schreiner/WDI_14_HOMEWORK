@@ -1,0 +1,55 @@
+body {
+  width: 80%;
+  margin: 60px auto;
+}
+
+.gif-container, .menu-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.menu-container {
+  float: left;
+}
+
+.gif-container {
+  float: right;
+  margin: 0;
+  width: 500px;
+
+}
+
+.gif-container div img{
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Bungee', cursive;
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin: 0 0 10px 0 ;
+}
+
+p {
+  font-family: 'Bungee Hairline', cursive;
+  font-size: 20px;
+  font-weight:  900;
+  margin: 20px 0 60px 0;
+}
+
+
+button {
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 5px; 
+  text-transform: uppercase;
+  margin: 0 5px; 
+}
+
+input {
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+}
