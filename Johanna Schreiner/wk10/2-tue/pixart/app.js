@@ -17,6 +17,6 @@ for (var i = 0; i <= 100; i++){
 
 
 $('.squares').on('click', '.square', function(event){
-  $(event.target).css("background-color", "green")
+  $(event.target).css("background-color", $colorChoice)
 })
 
