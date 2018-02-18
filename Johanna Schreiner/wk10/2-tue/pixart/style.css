@@ -1,7 +1,8 @@
 .brush {
   margin: 40px 0 0 0;
-  height: 200px;
-  width: 500px;
+  height: 300px;
+  width: 480px;
+  border: 1px solid black;
 }
 
 .squares {
