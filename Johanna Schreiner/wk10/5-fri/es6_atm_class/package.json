@@ -1,0 +1,12 @@
+{
+  "name": "es6_atm_class",
+  "version": "1.0.0",
+  "description": "",
+  "main": "atm.js",
+  "scripts": {
+    "start": "node atm.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
